@@ -1,0 +1,125 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  backdrop-filter: blur(12px);
+  background: rgba(19, 19, 19, 0.8);
+  padding: 0 20px;
+  z-index: 1000;
+  span {
+    font-size: 24px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    &.orangeDev {
+      color: #ff7b00;
+    }
+  }
+  nav {
+    width: 350px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          position: relative;
+          color: white;
+          transition: 0.5s ease;
+          cursor: pointer;
+          font-weight: 500;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.3s ease;
+            height: 2px;
+            width: 0;
+            background: orange;
+          }
+          &:hover {
+            letter-spacing: 1px;
+            color: orange;
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 120px;
+    svg {
+      cursor: pointer;
+      color: orange;
+      &:hover {
+        path {
+          transition: 0.2s ease;
+          color: orange;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  header {
+    nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      padding: 50px 50px 20px 20px;
+      height: 100vh;
+      width: 200px;
+      background: pink;
+      transition: 0.5s ease;
+      ul {
+        flex-flow: column;
+        li {
+          text-align: right;
+          height: auto;
+          a {
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+            &::before {
+              background: none;
+            }
+          }
+        }
+      }
+      .closeButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        path {
+          transition: 0.3s ease;
+        }
+        &:hover {
+          path {
+            color: var(--orange);
+          }
+        }
+      }
+      &.open {
+        right: 0;
+      }
+      &.closed {
+        right: -200px;
+      }
+    }
+  }
+}

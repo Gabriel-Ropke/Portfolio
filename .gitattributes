@@ -1,0 +1,3 @@
+# Garante que o Git sempre trate arquivos de texto com terminações de linha LF (Unix)
+# Isso padroniza o repositório para todos os desenvolvedores.
+* text=auto eol=lf

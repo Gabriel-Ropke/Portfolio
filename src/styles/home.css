@@ -1,0 +1,149 @@
+section#home {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: column;
+  gap: 20px;
+  padding-top: 64px;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(255, 165, 0, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.05),
+      transparent 40%
+    );
+  z-index: 1;
+  height: calc(100vh - 60px);
+  #tsparticles {
+    z-index: 1;
+    pointer-events: none;
+    canvas {
+      pointer-events: none;
+    }
+  }
+  nav {
+    position: relative;
+    width: 150px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      li {
+        a {
+          svg {
+            path {
+              color: gray;
+              transition: 0.2s ease;
+            }
+          }
+          &:hover {
+            path {
+              color: var(--orange);
+            }
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    text-align: center;
+    font-size: 84px;
+    line-height: 90px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    user-select: none;
+    span:first-child {
+      display: block;
+      color: white;
+      white-space: nowrap;
+      border-right: 4px solid var(--orange);
+      overflow: hidden;
+      animation: firstPhrase 2s steps(22),
+        blinking 0.5s infinite step-end alternate;
+      animation-fill-mode: forwards;
+    }
+    span.color {
+      display: block;
+      color: var(--orange);
+      white-space: nowrap;
+      transition-delay: 2s;
+      border-right: 4px solid var(--orange);
+      overflow: hidden;
+      opacity: 0;
+      min-width: 1px;
+      height: 90px;
+      animation: appear 0.1s, blinking 0.5s infinite step-end alternate;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+  p {
+    font-size: 28px;
+    color: gray;
+    text-align: center;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 10px;
+    &.subtitle {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  div.buttonContainer {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    button {
+      padding: 15px 20px;
+      background: var(--orange);
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border: 3px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.5s ease;
+      &:not(:first-child) {
+        background: none;
+        border: 3px solid var(--orange);
+        color: var(--orange);
+        &:hover {
+          background: var(--orange);
+          color: white;
+        }
+      }
+    }
+  }
+}
+@keyframes firstPhrase {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11ch;
+    border-color: transparent;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
