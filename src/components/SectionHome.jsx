@@ -39,17 +39,20 @@ function SectionHome() {
       <nav>
         <ul>
           <li>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/gabriel-ropke-7338a9264/"
+              target="_blank"
+            >
               <FaLinkedinIn size={24} />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://github.com/Gabriel-Ropke" target="_blank">
               <FaGithub size={24} />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://wa.me/5548998159403" target="_blank">
               <BsChat size={24} />
             </a>
           </li>
@@ -67,8 +70,14 @@ function SectionHome() {
         Transformo ideias em experiências digitais modernas e <br /> otimizadas
       </p>
       <div className="buttonContainer">
-        <button>Ver projetos</button>
-        <button>Contato no WhatsApp</button>
+        <button>
+          <a href="#projects">Ver projetos</a>
+        </button>
+        <button>
+          <a href="https://wa.me/5548998159403" target="_blank">
+            Contato no WhatsApp
+          </a>
+        </button>
       </div>
     </section>
   );

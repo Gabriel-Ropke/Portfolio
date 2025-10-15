@@ -27,6 +27,7 @@ section#home {
   nav {
     position: relative;
     width: 150px;
+    z-index: 10;
     ul {
       display: flex;
       align-items: center;
@@ -103,6 +104,7 @@ section#home {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    z-index: 10;
     button {
       padding: 15px 20px;
       background: var(--orange);
@@ -113,6 +115,14 @@ section#home {
       border-radius: 10px;
       cursor: pointer;
       transition: 0.5s ease;
+      outline: 2px solid transparent;
+      &:first-child {
+        &:hover {
+          outline: 2px solid var(--orange);
+          scale: 1.05;
+          outline-offset: 2px;
+        }
+      }
       &:not(:first-child) {
         background: none;
         border: 3px solid var(--orange);
@@ -145,5 +155,83 @@ section#home {
 @keyframes blinking {
   50% {
     border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#home {
+    h1 {
+      font-size: 60px;
+      line-height: 60px;
+      span.color {
+        height: 60px;
+      }
+    }
+    p {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  section#home {
+    background-image: radial-gradient(
+        circle at top center,
+        rgba(255, 165, 0, 0.15),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.05),
+        transparent 40%
+      );
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+      span.color {
+        height: 48px;
+      }
+    }
+    br {
+      display: none;
+    }
+    p {
+      font-size: 20px;
+      line-height: 20px;
+      &.subtitle {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 470px) {
+  section#home {
+    p {
+      font-size: 20px;
+      line-height: 20px;
+      &.subtitle {
+        font-size: 14px;
+      }
+    }
+    div.buttonContainer {
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      button {
+        width: 80%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  section#home {
+    h1 {
+      font-size: 40px;
+      line-height: 40px;
+      span.color {
+        height: 40px;
+      }
+    }
   }
 }

@@ -1,4 +1,6 @@
+import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
 import "../styles/contacts.css";
+import { MdEmail } from "react-icons/md";
 export default function SectionContacts() {
   const inputIsActive = (e) => {
     const input = e.target;
@@ -48,14 +50,34 @@ export default function SectionContacts() {
             ></textarea>
             <label htmlFor="emailContent">Escreva sua Mensagem</label>
           </div>
-          <button type="submit">Enviar Mensagem</button>
+          <button type="submit">
+            <MdEmail size={24} />
+            Enviar Mensagem
+          </button>
         </form>
-        <div className="buttonsContainer">
+        <div className="linksContainer">
+          <h4>Conecte-se comigo</h4>
           <ul>
             <li>
-              <a href="/">WhatsApp</a>
-              <a href="/">Github</a>
-              <a href="/">Linkedin</a>
+              <a href="https://wa.me/5548998159403" target="_blank">
+                <SiWhatsapp size={24} fill="#2CC25A" />
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/gabriel-ropke-7338a9264/"
+                target="_blank"
+              >
+                <SiLinkedin size={24} fill="#085FA3" />
+                Linkedin
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Gabriel-Ropke" target="_blank">
+                <SiGithub size={24} />
+                Github
+              </a>
             </li>
           </ul>
         </div>

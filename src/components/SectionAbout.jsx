@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../styles/about.css";
 import profileImageUrl from "../assets/Profile.png";
 import { HiCode, HiSun } from "react-icons/hi";
 import { PiPaletteBold } from "react-icons/pi";
+import useScrollOverflow from "../hooks/useOverflow"; // Use o novo hook
 
 function SectionAbout() {
+  const containerRef = useRef(null);
+
+  // Agora recebemos um objeto com os dois estados
+  const { isOverflowingTop, isOverflowingBottom } =
+    useScrollOverflow(containerRef);
   return (
     <section id="about">
       <div className="imgContainer">
@@ -14,16 +20,26 @@ function SectionAbout() {
         <h2 className="dontHaveBefore">
           Sobre <span>mim</span>
         </h2>
-        <p>
-          Sou desenvolvedor apaixonado por <span>tecnologia</span> e{" "}
-          <span>design</span>. Crio interfaces modernas e otimizadas,
-          transformando ideias em experiências digitais reais.
-        </p>
-        <p>
-          Com experiência em <span>desenvolvimento front-end</span> e
-          <span> conhecimento full stack</span>, trabalho com as tecnologias
-          mais modernas do mercado para entregar soluções que fazem a diferença.
-        </p>
+        <div
+          ref={containerRef}
+          className={`
+        content
+        ${isOverflowingTop ? "topOverflow" : ""}
+        ${isOverflowingBottom ? "bottomOverflow" : ""}
+      `}
+        >
+          <p>
+            Sou desenvolvedor apaixonado por <span>tecnologia</span> e{" "}
+            <span>design</span>. Crio interfaces modernas e otimizadas,
+            transformando ideias em experiências digitais reais.
+          </p>
+          <p>
+            Com experiência em <span>desenvolvimento front-end</span> e
+            <span> conhecimento full stack</span>, trabalho com as tecnologias
+            mais modernas do mercado para entregar soluções que fazem a
+            diferença.
+          </p>
+        </div>
         <div className="boxContainer">
           <div className="box">
             <HiCode size={32}></HiCode>
