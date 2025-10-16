@@ -5,7 +5,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
@@ -32,6 +31,7 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--title-color);
   z-index: 10;
   padding: 0 30px;
 }
@@ -71,5 +71,28 @@ html {
 body {
   overflow-x: hidden;
   padding-top: 60px;
+  background: var(--bg-color-1);
   --orange: #ff7b00;
+  &.dark {
+    --title-color: white;
+    --bg-color-1: #121212;
+    --bg-color-2: rgb(12, 12, 12);
+    --bg-color-3: black;
+    --contact-link: none;
+    --text-color: gray;
+    --text-color-2: white;
+    --text-color-3: white;
+    --input-color: gray;
+  }
+  &.light {
+    --title-color: black;
+    --bg-color-1: #fff;
+    --bg-color-2: #f8f9fa;
+    --bg-color-3: #dadada;
+    --contact-link: var(--orange);
+    --text-color: black;
+    --text-color-2: black;
+    --text-color-3: var(--orange);
+    --input-color: black;
+  }
 }

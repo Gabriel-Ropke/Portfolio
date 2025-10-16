@@ -64,7 +64,7 @@ section#home {
     user-select: none;
     span:first-child {
       display: block;
-      color: white;
+      color: var(--title-color);
       white-space: nowrap;
       border-right: 4px solid var(--orange);
       overflow: hidden;
@@ -126,10 +126,15 @@ section#home {
       &:not(:first-child) {
         background: none;
         border: 3px solid var(--orange);
-        color: var(--orange);
+        a {
+          transition: 0.2s ease;
+          color: var(--orange);
+        }
         &:hover {
           background: var(--orange);
-          color: white;
+          a {
+            color: white;
+          }
         }
       }
     }

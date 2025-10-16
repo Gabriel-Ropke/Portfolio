@@ -9,7 +9,7 @@ section#projects {
   margin-top: 80px;
   padding: 20px 0 300px 0;
   min-height: 700px;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--bg-color-2);
   h2 {
     margin-top: 50px;
     font-size: 48px;
@@ -84,8 +84,12 @@ section#projects {
             height: calc(100% - 200px);
             padding: 20px;
             span.projectTitle {
+              color: var(--text-color);
               font-size: 24px;
               font-weight: 600;
+            }
+            p {
+              color: var(--text-color-2);
             }
             div.linksContainer {
               display: flex;
@@ -105,12 +109,31 @@ section#projects {
                 cursor: pointer;
                 transition: 0.2s ease;
                 svg {
+                  path {
+                    transition: 0.3s ease;
+                  }
                   transition: 0.3s ease;
+                }
+                &:first-child {
+                  span {
+                    color: var(--text-color-3);
+                  }
+                  svg {
+                    path {
+                      fill: var(--text-color-3);
+                    }
+                  }
                 }
                 &:hover {
                   gap: 15px;
                   background: var(--orange);
+                  span {
+                    color: white;
+                  }
                   svg {
+                    path {
+                      fill: white;
+                    }
                     rotate: 45deg;
                   }
                 }

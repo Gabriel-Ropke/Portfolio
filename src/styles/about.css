@@ -15,12 +15,7 @@ section#about {
   align-items: flex-start;
   justify-content: center;
   gap: 50px;
-  background: linear-gradient(
-    to bottom,
-    rgb(28, 28, 28, 0.2),
-    rgba(0, 0, 0, 0.2)
-  );
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-color-2);
   padding-top: 100px;
   min-height: 600px;
 
@@ -85,7 +80,7 @@ section#about {
       }
       p {
         margin-top: 10px;
-        color: #999999;
+        color: var(--text-color);
         span {
           color: var(--orange);
         }
