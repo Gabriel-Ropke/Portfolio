@@ -37,7 +37,7 @@ section#about {
       padding: 0;
       font-size: 42px;
       span {
-        color: var(--orange);
+        color: var(--orange-to-white);
       }
     }
     div.content {
@@ -80,9 +80,9 @@ section#about {
       }
       p {
         margin-top: 10px;
-        color: var(--text-color);
+        color: white;
         span {
-          color: var(--orange);
+          color: var(--orange-to-black);
         }
       }
     }
@@ -99,14 +99,15 @@ section#about {
         justify-content: center;
         gap: 5px;
         width: calc(100% / 3 - 10px);
-        background: #1f1f1f;
-        border: 1px solid gray;
+        background: var(--about-box-bg);
+        border: 1px solid var(--about-box-border);
         cursor: context-menu;
         user-select: none;
         border-radius: 5px;
         padding: 16px;
         transition: 0.2s ease;
         span {
+          color: var(--white-to-orange);
           transition: 0.5s ease;
         }
         svg {

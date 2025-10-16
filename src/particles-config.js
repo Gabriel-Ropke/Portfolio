@@ -1,11 +1,14 @@
 const particlesConfig = {
   fullScreen: {
-    enable: true,
+    enable: false,
     zIndex: -1, // Coloca no fundo
+  },
+  style: {
+    position: "absolute", // Instrui a biblioteca a usar 'absolute' em vez de 'fixed'
   },
   particles: {
     number: {
-      value: 100, // Número de partículas
+      value: 200, // Número de partículas
       density: {
         enable: true,
         value_area: 800,
@@ -18,7 +21,7 @@ const particlesConfig = {
       type: "circle",
     },
     opacity: {
-      value: { min: 0.1, max: 0.5 }, // Opacidade varia
+      value: { min: 0.3, max: 0.5 }, // Opacidade varia
     },
     size: {
       value: { min: 1, max: 3 }, // Tamanho varia
@@ -30,7 +33,7 @@ const particlesConfig = {
       random: true,
       straight: false,
       out_mode: "out",
-      bounce: false,
+      bounce: true,
     },
   },
   interactivity: {

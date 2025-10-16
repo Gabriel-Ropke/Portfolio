@@ -14,7 +14,7 @@ section#projects {
     margin-top: 50px;
     font-size: 48px;
     span {
-      color: var(--orange);
+      color: var(--orange-to-white);
     }
   }
   div.wave {
@@ -34,10 +34,11 @@ section#projects {
       font-size: 46px;
       margin: 40px;
       padding: 0 20px;
-      color: var(--orange);
-      border-left: 5px solid var(--orange);
+      color: var(--orange-to-white);
+      border-left: 5px solid var(--orange-to-white);
       &.personal {
-        color: white;
+        border-color: var(--orange-to-black);
+        color: var(--text-color-2);
       }
     }
     nav {
@@ -53,12 +54,13 @@ section#projects {
           min-height: 400px;
           max-width: 550px;
           border-radius: 25px;
-          box-shadow: 1px 1px 10px 1px black;
+          background: var(--project-box-bg);
+          box-shadow: var(--project-box-shadow);
           border: 2px solid transparent;
           transition: 0.5s ease;
           &:hover {
-            border: 2px solid var(--orange);
-            box-shadow: 2px 2px 15px 2px var(--orange);
+            border: 2px solid var(--orange-to-white);
+            box-shadow: var(--project-box-shadow-hover);
             img {
               scale: 1.2;
             }

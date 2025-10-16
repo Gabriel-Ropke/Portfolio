@@ -28,7 +28,7 @@ section#abilities {
       justify-content: center;
       gap: 20px;
       border: 2px solid transparent;
-      background: #1a1a1a;
+      background: var(--ability-box-bg);
       border-radius: 20px;
       height: 140px;
       user-select: none;
@@ -39,8 +39,58 @@ section#abilities {
         font-weight: 500;
       }
       &:hover {
+        background: var(--ability-box-hover);
         border: 2px solid var(--orange);
         box-shadow: 0px 0px 8px 0px var(--orange);
+        &.html {
+          svg {
+            path {
+              color: var(--color-html-hover);
+            }
+          }
+        }
+        &.css {
+          svg {
+            path {
+              color: var(--color-css-hover);
+            }
+          }
+        }
+        &.js {
+          svg {
+            path {
+              color: var(--color-js-hover);
+            }
+          }
+        }
+        &.nodejs {
+          svg {
+            path {
+              color: var(--color-nodejs-hover);
+            }
+          }
+        }
+        &.react {
+          svg {
+            path {
+              color: var(--color-react-hover);
+            }
+          }
+        }
+        &.git {
+          svg {
+            path {
+              color: var(--color-git-hover);
+            }
+          }
+        }
+        &.css {
+          svg {
+            path {
+              color: var(--color-css-hover);
+            }
+          }
+        }
       }
       &.html {
         svg {

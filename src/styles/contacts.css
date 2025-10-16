@@ -139,7 +139,7 @@ section#contacts {
             height: 100%;
             padding: 15px 20px;
             transition: 0.2s ease;
-            background: var(--contact-link);
+            background: var(--contact-box);
             path {
               transition: 0.3s ease;
             }

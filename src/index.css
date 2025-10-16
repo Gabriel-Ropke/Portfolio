@@ -68,31 +68,94 @@ html {
     display: none;
   }
 }
+section {
+  transition: 0.3s ease;
+}
 body {
   overflow-x: hidden;
   padding-top: 60px;
   background: var(--bg-color-1);
   --orange: #ff7b00;
   &.dark {
-    --title-color: white;
+    /* Section Background */
     --bg-color-1: #121212;
     --bg-color-2: rgb(12, 12, 12);
     --bg-color-3: black;
-    --contact-link: none;
+
+    /* Text */
+    --title-color: white;
     --text-color: gray;
     --text-color-2: white;
     --text-color-3: white;
+    --black-to-white: black;
+    --orange-to-black: var(--orange);
+    --orange-to-white: var(--orange);
+    --white-to-orange: white;
+
+    /* Input */
     --input-color: gray;
+
+    /*Content Box*/
+    --contact-box: none;
+    --about-box-bg: #1f1f1f;
+    --about-box-border: gray;
+    --ability-box-bg: #1a1a1a;
+    --project-box-bg: transparent;
+    --project-box-shadow: 1px 1px 10px 1px black;
+    --project-box-shadow-hover: 2px 2px 15px 2px var(--orange);
+
+    /* Special - Abilities ( Light Mode ) */
+    --ability-box-hover: #1a1a1a;
+    --color-html-hover: #e34f26; /* Laranja avermelhado */
+    --color-css-hover: #1572b6; /* Azul */
+    --color-js-hover: #f7df1e; /* Amarelo */
+    --color-react-hover: #61dafb; /* Azul claro (React) */
+    --color-nodejs-hover: #339933; /* Verde */
+    --color-vite-hover: #c232da; /* Roxo */
   }
   &.light {
     --title-color: black;
+
+    /* Section Background */
     --bg-color-1: #fff;
-    --bg-color-2: #f8f9fa;
-    --bg-color-3: #dadada;
-    --contact-link: var(--orange);
+    --bg-color-2: var(--orange);
+    --bg-color-3: white;
+
+    /* Text */
     --text-color: black;
     --text-color-2: black;
     --text-color-3: var(--orange);
+    --black-to-white: white;
+    --orange-to-black: black;
+    --orange-to-white: white;
+    --white-to-orange: var(--orange);
+
+    /* Input */
     --input-color: black;
+
+    /*Content Box*/
+    --contact-box: var(--orange);
+    --about-box-bg: white;
+    --about-box-border: transparent;
+    --ability-box-bg: var(--orange);
+    --project-box-bg: white;
+    --project-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
+    --project-box-shadow-hover: 2px 2px 15px 2px white;
+    --color-html: white;
+    --color-css: white;
+    --color-js: white;
+    --color-nodejs: white;
+    --color-react: white;
+    --color-git: white;
+
+    /* Special - Abilities ( Light Mode ) */
+    --ability-box-hover: #1a1a1a;
+    --color-html-hover: #e34f26; /* Laranja avermelhado */
+    --color-css-hover: #1572b6; /* Azul */
+    --color-js-hover: #f7df1e; /* Amarelo */
+    --color-react-hover: #61dafb; /* Azul claro (React) */
+    --color-nodejs-hover: #339933; /* Verde */
+    --color-vite-hover: #c232da; /* Roxo */
+    --color-git-hover: #f05032;
   }
 }

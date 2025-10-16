@@ -85,8 +85,8 @@ export default function SectionProjects() {
         <h3>Profissional</h3>
         <nav>
           <ul>
-            {professionalProjects.map((project) => (
-              <li>
+            {professionalProjects.map((project, index) => (
+              <li key={`professional-${index}`}>
                 <div className="img">
                   <img src={project.img} alt="" />
                 </div>
@@ -113,8 +113,8 @@ export default function SectionProjects() {
         <h3 className="personal">Pessoal</h3>
         <nav>
           <ul>
-            {personalProjects.map((project) => (
-              <li>
+            {personalProjects.map((project, index) => (
+              <li key={`personal-${index}`}>
                 <div className="img">
                   <img src={project.img} alt="" />
                 </div>

@@ -1,4 +1,5 @@
 section#home {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -18,6 +19,11 @@ section#home {
   z-index: 1;
   height: calc(100vh - 60px);
   #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
     pointer-events: none;
     canvas {
