@@ -76,6 +76,15 @@ body {
   padding-top: 60px;
   background: var(--bg-color-1);
   --orange: #ff7b00;
+  /* Special - Abilities ( Light Mode ) */
+  --ability-box-hover: #1a1a1a;
+  --color-html-hover: #e34f26;
+  --color-css-hover: #1572b6;
+  --color-js-hover: #f7df1e;
+  --color-react-hover: #61dafb;
+  --color-nodejs-hover: #339933;
+  --color-vite-hover: #c232da;
+  --color-git-hover: #f05032;
   &.dark {
     /* Section Background */
     --bg-color-1: #121212;
@@ -103,25 +112,15 @@ body {
     --project-box-bg: transparent;
     --project-box-shadow: 1px 1px 10px 1px black;
     --project-box-shadow-hover: 2px 2px 15px 2px var(--orange);
-
-    /* Special - Abilities ( Light Mode ) */
-    --ability-box-hover: #1a1a1a;
-    --color-html-hover: #e34f26; /* Laranja avermelhado */
-    --color-css-hover: #1572b6; /* Azul */
-    --color-js-hover: #f7df1e; /* Amarelo */
-    --color-react-hover: #61dafb; /* Azul claro (React) */
-    --color-nodejs-hover: #339933; /* Verde */
-    --color-vite-hover: #c232da; /* Roxo */
   }
   &.light {
-    --title-color: black;
-
     /* Section Background */
     --bg-color-1: #fff;
     --bg-color-2: var(--orange);
     --bg-color-3: white;
 
     /* Text */
+    --title-color: black;
     --text-color: black;
     --text-color-2: black;
     --text-color-3: var(--orange);
@@ -147,15 +146,5 @@ body {
     --color-nodejs: white;
     --color-react: white;
     --color-git: white;
-
-    /* Special - Abilities ( Light Mode ) */
-    --ability-box-hover: #1a1a1a;
-    --color-html-hover: #e34f26; /* Laranja avermelhado */
-    --color-css-hover: #1572b6; /* Azul */
-    --color-js-hover: #f7df1e; /* Amarelo */
-    --color-react-hover: #61dafb; /* Azul claro (React) */
-    --color-nodejs-hover: #339933; /* Verde */
-    --color-vite-hover: #c232da; /* Roxo */
-    --color-git-hover: #f05032;
   }
 }
