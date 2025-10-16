@@ -8,7 +8,7 @@ import SectionProjects from "./components/SectionProjects";
 import SectionContacts from "./components/SectionContacts";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
   const [menu, setMenu] = useState("closed");
 
   const scrollToSection = (event, sectionId, needScroll) => {
